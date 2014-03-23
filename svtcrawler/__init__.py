@@ -106,7 +106,11 @@ def sanitize_description(value):
     cleaned.remove('time')
     cleaned.remove('strong')
 
-    return cleaned.html().split('<span>')[-1:][0].replace('</span>', '').strip()
+    desc = cleaned.html()
+
+    if desc is None: return ""
+
+    return desc.split('<span>')[-1:][0].replace('</span>', '').strip()
 
 class Category:
     def __init__(self, title, url, html_class, thumbnail):
