@@ -102,10 +102,11 @@ def sanitize_description(value):
     cleaned = PyQuery(value)
     cleaned = cleaned.remove('span.playMetaText')
     cleaned.remove('span.playMetaText')
+    cleaned.remove('span.playCount')
     cleaned.remove('time')
     cleaned.remove('strong')
 
-    return cleaned.html().split('<span>')[-1:][0].replace('</span>', '')
+    return cleaned.html().split('<span>')[-1:][0].replace('</span>', '').strip()
 
 class Category:
     def __init__(self, title, url, html_class, thumbnail):
