@@ -363,7 +363,7 @@ class SvtCrawler:
         self.baseurl = 'http://www.svtplay.se'
         self.url = 'http://www.svtplay.se/program'
         self.category_url = 'http://www.svtplay.se%s/?tab=titlar&sida=1000'
-        self.news_url = 'http://www.svtplay.se%s/?tab=regionalNews&sida=1000'
+        self.news_url = 'http://www.svtplay.se%s/?tab=regionala&sida=1000'
         self.max = max_timestamp
         self.min = min_timestamp
         if type(skip_urls) == 'str':
